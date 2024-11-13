@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/numberInputX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter X value"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/numberInputY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Y value"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/blueCountdownText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue: 0"
+        android:textSize="18sp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/redCountdownText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red: 0"
+        android:textSize="18sp"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center" />
+</LinearLayout>
