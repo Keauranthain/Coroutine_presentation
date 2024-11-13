@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 var blueCountdown = xValue
                 while (isActive) {
                     blueCountdownText.text = "Blue: $blueCountdown"
-                    delay(1000L)
+                    sleepCoroutine ()
                     blueCountdown--
                     if (blueCountdown < 0) {
                         blueCountdown = xValue
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 var redCountdown = yValue
                 while (isActive) {
                     redCountdownText.text = "Red: $redCountdown"
-                    delay(1000L)
+                    sleepCoroutine ()
                     redCountdown--
                     if (redCountdown < 0) {
                         redCountdown = yValue
@@ -76,9 +76,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     override fun onDestroy() {
         super.onDestroy()
         coroutineJob1?.cancel()
         coroutineJob2?.cancel()
     }
+}
+
+//function with suspend
+suspend fun sleepCoroutine (){
+    delay(1000L)
 }
